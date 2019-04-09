@@ -1,0 +1,17 @@
+{
+  "name": "tesdesain3",
+  "version": "1.0.0",
+  "description": "Goverment Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hendri Ramadhan",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sass": "^4.0.2"
+  }
+}

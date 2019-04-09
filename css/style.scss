@@ -1,0 +1,977 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fff;
+}
+
+header#header-area{
+    padding: 0 4%;
+    margin: 0;
+    background-color: #3498db;
+
+    @media (max-width:1024px) {
+        padding: 0;
+    }
+
+    #top-header{
+        background-color: #2980b9;
+        display: grid;
+        grid-template-columns:10% auto;
+        grid-template-areas: 'logo menu';
+        position: relative;
+
+        @media (max-width:740px) {
+            display: block;
+        }
+
+        .logo{
+            text-align: center;
+            margin: 0 10%;
+            display: flex;
+            justify-content: center;
+            background-color: #2980b9;
+            padding: 1% 1%;
+            border-radius: 0 0 42% 42%;
+            z-index: 99;
+
+            @media (max-width:740px){
+                display: block;
+            }
+
+            h1{
+                color: #fff;
+                font-size: 100%;
+                text-align: center;
+                margin: 10% 0 0 0;
+
+                @media (max-width:768px) {
+                    font-size: 85%;
+                }
+
+                @media (max-width:740px) {
+                    font-size: 17px;
+                    margin: 0;
+                }
+
+                @media (max-width:425px) {
+                    font-size: 15px;
+                }
+
+            }
+
+            a{
+                left: 20%;
+
+                img.logo{
+                    position: absolute;
+                    width: 8%;
+                    top: 24%;
+                    left: -10%;
+
+                    @media (max-width:740px) {
+                        position: relative;
+                        width: 20%;
+                        left: 29%;
+                    }
+
+                    @media (max-width:375px) {
+                        width: 25%;
+                        left: 26%;
+                    }
+                    
+                }
+            }
+            
+        }
+
+        nav.top-menu{
+
+            ul{
+                list-style-type: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+
+                @media (max-width:740px) {
+                    display: none;
+                    width: 100%;
+                }
+                
+                li{
+                    display: inline-block;
+                    flex: 1;
+                    border-right: #fff solid 1px;
+                    border-bottom: #fff solid 1px;
+                    border-top: #fff solid 1px;
+
+                    @media (max-width:740px) {
+                        padding: 1%;
+                        flex: 0 0 30.87%;
+                        display: flex;
+                        border: #fff solid 1px;
+                    }
+
+                    @media (max-width:425px) {
+                        flex: 0 0 30.8%;
+                    }
+
+                    @media (max-width:375px) {
+                        flex: 0 0 30.71%;
+                    }
+
+                    @media (max-width:320px) {
+                        flex: 0 0 30.71%;
+                    }
+                    
+                    a{
+                        color: #fff;
+                        justify-content: center;
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                        text-decoration: none;
+                        align-items: center;
+                        padding: 10% 0;
+                        
+
+                        .gov-logo{
+                            width: 30%;
+                        }
+
+                    }
+
+                    
+                    
+                }
+
+                li:first-child{
+                    border-left: #fff solid 1px;
+                }
+            }
+
+            .toggle{
+                width: 100%;
+                padding: 10px 20px;
+                background-color: #3498db;
+                text-align: right;
+                box-sizing: border-box;
+                font-size: 20px;
+                display: none;
+        
+                @media (max-width:740px) {
+                    display: block;
+                    color: #fff;
+        
+                    .teks-menu{
+                        float: left;
+                    }
+                }
+            }
+        
+            @media (max-width:740px) {
+                .active{
+                    display: flex;
+                    margin: 0;
+                    flex-wrap: wrap;
+                }
+            }
+
+
+        }
+    }
+
+    #bottom-header{
+        background-color: #3498db;
+        margin: 0 0 0 20%;
+
+        @media (max-width:768px) {
+            margin: 0 0 0 14%;
+        }
+
+        @media (max-width:740px) {
+            margin: 0;
+        }
+        
+        ul{
+            list-style-type: none;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+
+            @media (max-width:740px) {
+                display: none;
+                width: 100%;
+            }
+            
+
+            li{
+                float: left;
+                padding: 1% 4%;
+
+                @media (max-width:740px) {
+                    float: none;
+                    padding: 3% 3%;
+                    display: block;
+                    width: 100%;
+                }
+
+                a{
+                    color: #fff;
+                    display: inline-block;
+                    text-decoration: none;
+                    text-align: center;
+                    
+
+                }
+
+            }
+
+            .dropdown:hover{
+                background: #2980b9;
+                
+                .isi-dropdown{
+                    display: block;
+
+                    @media (max-width:740px) {
+                        padding: 0;
+                    }
+                    
+                    li{
+                        float: none;
+                        background: #2980b9;
+                        width: 100%;
+
+                        @media (max-width:740px) {
+                            padding: 0%;
+                        }   
+
+                    }
+                }
+                
+            }
+
+            li.dropdown{
+                display: inline-block;
+                
+
+                ul.isi-dropdown{
+                    display: none;
+                    position: absolute;
+                    background: #2980b9;
+                    z-index: 99;
+                    padding: 1% 2%;
+
+                    @media (max-width:740px) {
+                        position: relative;
+                    }
+
+                    li{
+                        a{
+                            padding: 10% 2%;
+
+                            @media (max-width:740px) {
+                                padding: 3% 3%;
+                            }
+                        }
+
+                    }
+                }
+            }
+            
+        }
+
+        .toggle{
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #3498db;
+            text-align: right;
+            box-sizing: border-box;
+            font-size: 20px;
+            display: none;
+    
+            @media (max-width:740px) {
+                display: block;
+    
+                .teks-menu{
+                    float: left;
+                }
+            }
+        }
+    
+        @media (max-width:740px) {
+            .active{
+                display: block;
+
+
+            }
+        }
+
+    }
+
+    .toggle{
+        width: 100%;
+        padding: 10px 20px;
+        background-color: #3498db;
+        text-align: right;
+        box-sizing: border-box;
+        font-size: 20px;
+        display: none;
+
+        @media (max-width:740px) {
+            display: block;
+
+            .teks-menu{
+                float: left;
+            }
+        }
+    }
+
+    @media (max-width:740px) {
+        .active{
+            display: block;
+            margin: 0;
+
+            
+        }
+    }
+
+}
+
+main{
+    margin-bottom: 7%;
+
+    #slideshow{
+
+        .custom-slider {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+          }
+          
+          .custom-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: .6s all;
+            z-index: 2;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%);
+
+          }
+          
+          .active-slide {
+            opacity: 1;
+            top: 0 !important;
+            left: 0 !important;
+            z-index: 10 !important;
+          }
+          
+          .custom-caption {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 30%;
+            width: 100%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            overflow: hidden;
+            color: white;
+            text-align: center;
+            h1 {
+              -webkit-transform: translateY(-200%);
+              -ms-transform: translateY(-200%);
+              transform: translateY(-200%);
+              -webkit-transition: .4s all;
+              -o-transition: .4s all;
+              transition: .4s all;
+              opacity: 0;
+            }
+            h3 {
+              -webkit-transform: translateY(200%);
+              -ms-transform: translateY(200%);
+              transform: translateY(200%);
+              -webkit-transition: .4s all;
+              -o-transition: .4s all;
+              transition: .4s all;
+              opacity: 0;
+            }
+          }
+          
+          .active-caption {
+            -webkit-transform: translateY(0) !important;
+            -ms-transform: translateY(0) !important;
+            transform: translateY(0) !important;
+            opacity: 1 !important;
+          }
+          
+          .active-button {
+            opacity: 1 !important;
+          }
+          
+          .custom-slider {
+            .custom-slide1 {
+              background: url(../images/MaxPixel.freegreatpicture.com-Coffee-Computer-Work-The-Work-Background-Keyboard-3047385.jpg);
+              -webkit-background-size: cover;
+              background-size: cover;
+            }
+            .custom-slide2 {
+              background: url(../images/PIXNIO-205867-3087x2058.jpg);
+              -webkit-background-size: cover;
+              background-size: cover;
+            }
+            .custom-slide3 {
+              background: url(../images/PIXNIO-1063494.jpg);
+              -webkit-background-size: cover;
+              background-size: cover;
+            }
+          }
+          
+          .custom-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+          }
+          
+          .button {
+            border: 1px solid #0b84cb;
+            border-radius: 3px;
+            padding: 1% 1%;
+            color: #0b84cb;
+            font-size: 12px;
+            transition: all 0.25s;
+
+            &:after {
+              content: ' >';
+              display: inline-block;
+              animation: more 2s infinite;
+            }
+            &:hover {
+                color: #fff;
+                background: #0b84cb;
+                margin-left: 1%;
+            }
+          }
+          
+          @keyframes more {
+            0% {
+              -webkit-transform: translateX(0);
+              -ms-transform: translateX(0);
+              transform: translateX(0);
+              opacity: 0;
+            }
+          
+            25% {
+              -webkit-transform: translateX(25%);
+              -ms-transform: translateX(25%);
+              transform: translateX(25%);
+              opacity: .25;
+            }
+          
+            50% {
+              -webkit-transform: translateX(50%);
+              -ms-transform: translateX(50%);
+              transform: translateX(50%);
+              opacity: .50;
+            }
+          
+            75% {
+              -webkit-transform: translateX(100%);
+              -ms-transform: translateX(100%);
+              transform: translateX(100%);
+              opacity: 1;
+            }
+          
+            100% {
+              -webkit-transform: translateX(0);
+              -ms-transform: translateX(0);
+              transform: translateX(0);
+              opacity: 0;
+            }
+          }
+
+    }
+
+    #artikel-terbaru{
+        padding: 0;
+        position: relative;
+
+        h2{
+            text-align: center;
+            font-size: 30px;
+            margin: 4% 37%;
+            padding: 1% 1%;
+            border: #2980b9 solid 3px;
+            border-radius: 0 50px;
+
+            @media (max-width:1024px) {
+                margin: 4% 32%;
+            }
+
+            @media (max-width:768px) {
+                margin: 4% 18%;
+                border-radius: 0 40px;
+            }
+
+            @media (max-width:425px) {
+                margin: 4% 12%;
+                border-radius: 0 30px;
+            }
+        }
+
+        .grid{
+            padding:0 1%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .artikel-terbaru{
+                position: relative;
+                max-width: 270px;
+                margin: 1%;
+                transition: all 0.5s;
+                padding: 1%;
+
+                @media (max-width:1024px) {
+                    max-width: 320px;
+                }
+
+                @media (max-width:525px) {
+                    margin-bottom: 10%;
+                }
+                
+    
+                .card-image{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 40%;
+                    position: relative;
+                    overflow: hidden;
+                    border-bottom: #2980b9 solid 4px;
+
+                    
+                }
+
+                .kategori{
+                    position: absolute;
+                    top: -2%;
+                    left: 2%;
+                    z-index: 1;
+                    background-color: #2980b9;
+                    padding: 2% 3%;
+                    color: #fff;
+                    border-radius: 0 15px 0 15px;
+                }
+
+                a,h2{
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: #2980b9;
+                    border:none;
+                    margin: 0;
+                }
+
+                .times{
+                    font-size: 10px;
+                }
+            }
+
+            .artikel-terbaru:hover{
+                box-shadow: 2px 3px 10px 4px #888888;
+            }
+        }
+    }
+
+    #artikel-daftar{
+        padding-top: 3%;
+        .grid{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding:0 1%;
+
+            @media (max-width:1024px) {
+                padding:0;
+            }
+
+            .daftar1{
+                background-color: #2980b9;
+                padding: 3% 5%;
+                margin-bottom: 10%;
+                border-radius: 0 100px;
+
+                
+
+                @media (max-width:768px) {
+                    padding: 3% 8%;
+                }
+
+                @media (max-width:525px) {
+                    margin-bottom: 10%;
+                    margin-top: 0;
+                }
+
+                @media (max-width:425px) {
+                    padding: 3% 5.5%;
+                    border-radius: 0 70px;
+                    
+                }
+
+                h2{
+                    color: #fff;
+                    text-align: left;
+                    font-size: 25px;
+                    position: relative;
+                    
+                }
+
+                h2::after{
+                    content: " ";
+                    width: 50%;
+                    height: 0%;
+                    position: absolute;
+                    left: 0%;
+                    bottom: 0%;
+                    border-bottom: 3px solid #ffffff;
+                    transition: .3s ease-in-out;
+                }
+
+                h2:hover::after{
+                        width: 100%;
+                }
+
+                .kolom-daftar1{
+                    h4,a{
+                        text-decoration: none;
+                        color: #fff;
+                        margin: 25% 0;
+                        text-align: left;
+
+                        :hover{
+                            color: black;
+                        }
+                        
+                    }
+
+                    
+                    
+                }
+            }
+
+            .daftar2{
+                background-color: #3498db;
+                padding: 3% 5%;
+                margin-top: 10%;
+                border-radius: 0 0 0 100px;
+
+                @media (max-width:1024px) {
+                    border-radius: 0 100px;
+                }
+
+                @media (max-width:768px) {
+                    padding: 3% 8%;
+                }
+
+                @media (max-width:525px) {
+                    margin-bottom: 10%;
+                    margin-top: 0;
+                }
+
+                @media (max-width:425px) {
+                    padding: 3% 5.5%;
+                    margin-bottom: 10%;
+                    margin-top: 0;
+                    border-radius: 0 70px;
+                }
+
+                h2{
+                    color: #fff;
+                    text-align: left;
+                    font-size: 25px;
+                    position: relative;
+                }
+                h2::after{
+                    content: " ";
+                    width: 50%;
+                    height: 0%;
+                    position: absolute;
+                    left: 0%;
+                    bottom: 0%;
+                    border-bottom: 3px solid #ffffff;
+                    transition: .3s ease-in-out;
+                }
+
+                h2:hover::after{
+                        width: 100%;
+                }
+
+                .kolom-daftar1{
+                    h4,a{
+                        text-decoration: none;
+                        color: #fff;
+                        margin: 25% 0;
+                        text-align: left;
+
+                        :hover{
+                            color: black;
+                        }
+                        
+                    }
+
+                    
+                    
+                }
+            }
+
+            .daftar3{
+                background-color: #2980b9;
+                padding: 3% 5%;
+                margin-bottom: 10%;
+                border-radius: 0 100px 0 0;
+
+                @media (max-width:1024px) {
+                    border-radius: 0 100px;
+                }
+
+                @media (max-width:768px) {
+                    background-color: #3498db;
+                    padding: 3% 8%;
+                }
+
+                @media (max-width:525px) {
+                    margin-bottom: 10%;
+                    margin-top: 0;
+                }
+
+                @media (max-width:425px) {
+                    padding: 3% 5.5%;
+                    background-color: #2980b9;
+                    border-radius: 0 70px;
+                }
+
+                h2{
+                    color: #fff;
+                    text-align: left;
+                    font-size: 25px;
+                    position: relative;
+                }
+                h2::after{
+                    content: " ";
+                    width: 50%;
+                    height: 0%;
+                    position: absolute;
+                    left: 0%;
+                    bottom: 0%;
+                    border-bottom: 3px solid #ffffff;
+                    transition: .3s ease-in-out;
+                }
+
+                h2:hover::after{
+                        width: 100%;
+                }
+
+                .kolom-daftar1{
+                    h4,a{
+                        text-decoration: none;
+                        color: #fff;
+                        margin: 25% 0;
+                        text-align: left;
+
+                        :hover{
+                            color: black;
+                        }
+                        
+                    }
+
+                    
+                    
+                }
+            }
+
+            .daftar4{
+                background-color: #3498db;
+                padding: 3% 5%;
+                margin-top: 10%;
+                border-radius: 0 100px;
+
+                @media (max-width:1024px) {
+                    border-radius: 0 100px;
+                }
+
+                @media (max-width:768px) {
+                    padding: 3% 8%;
+                    background-color: #2980b9;
+                }
+
+                @media (max-width:525px) {
+                    margin-bottom: 10%;
+                    margin-top: 0;
+                }
+
+                @media (max-width:425px) {
+                    padding: 3% 5.5%;
+                    background-color: #3498db;
+                    margin-bottom: 10%;
+                    margin-top: 0;
+                    border-radius: 0 70px;
+                }
+
+                h2{
+                    color: #fff;
+                    text-align: left;
+                    font-size: 25px;
+                    position: relative;
+                }
+                h2::after{
+                    content: " ";
+                    width: 50%;
+                    height: 0%;
+                    position: absolute;
+                    left: 0%;
+                    bottom: 0%;
+                    border-bottom: 3px solid #ffffff;
+                    transition: .3s ease-in-out;
+                }
+
+                h2:hover::after{
+                        width: 100%;
+                }
+
+                .kolom-daftar1{
+                    h4,a{
+                        text-decoration: none;
+                        color: #fff;
+                        margin: 25% 0;
+                        text-align: left;
+
+                        :hover{
+                            color: black;
+                        }
+                        
+                    }
+
+                    
+                    
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background-color: #414141;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.87)), url('/images/PIXNIO-1063494.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    #menu-footer{
+        display: flex;
+        justify-content: center;
+        padding: 3% 0%;
+        color: #fff;
+        flex-wrap: wrap;
+        position: relative;
+        margin: 0 0 0 29%;
+
+        @media (max-width:1024px) {
+            padding: 3% 0%;
+            margin: 0 0 0px 38%;
+        }
+
+        @media (max-width:625px) {
+            padding: 40% 0 3% 0%;
+            margin: 0% 0 0 0%;
+        }
+
+        @media (max-width:425px) {
+            padding: 50% 0 3% 0%;
+        }
+
+        @media (max-width:375px) {
+            padding: 60% 0 3% 0%;
+        }
+
+        .kolom-footer{
+            margin: 1% 2%;
+            max-width: 250px;
+
+            @media (max-width:1024px) {
+                margin: 1% 5%;
+                
+            }
+            
+
+            h2{
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+
+            .logo-bottom{
+                float: left;
+                width: 20%;
+                padding: 1%;
+            }
+        }
+
+        .kolom-footer:first-child{
+            background-color: #fff;
+            color: #000;
+            position: absolute;
+            left: -30%;
+            padding: 4% 2%;
+            bottom: 22%;
+            box-shadow: 0px 0px 12px 5px #0000006e;
+            border-radius: 0 30px;
+
+            @media (max-width:1024px) {
+                left: -57%;
+                padding: 4% 2%;
+                bottom: 68%;
+            }
+
+            @media (max-width:625px) {
+                left: 14%;
+                padding: 4% 2%;
+                bottom: 75%;
+            }
+
+            @media (max-width:425px) {
+                left: 14%;
+                padding: 4% 2%;
+                bottom: 75%;
+            }
+            
+            @media (max-width:375px) {
+                left: 10%;
+            }
+
+            @media (max-width:320px) {
+                left:4%;
+            }
+
+        }
+
+    }
+
+    
+
+    #credit-footer{
+        border-top: #fff solid 1px;
+        text-align: center;
+
+        p{
+            padding: 0 0 2% 0;
+            color: #fff;
+        }
+        
+        padding: 0 10%;
+    }
+}
